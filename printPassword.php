@@ -24,19 +24,13 @@ include_once "function.php";
                 <h1>Strong Password Generator</h1>
                 <h2 class="text-white">Genera una password sicura</h2>
             </div>
-            <div class="d-flex justify-content-center">
-                <div class="col-4">
-                    <form action="printPassword.php" method=" GET">
-                        <div class="text-center p-4">
-                            <label for="lenghtPassword" class="form-label p-2 text-white">Lunghezza password</label>
-                            <input type="number" class="form-control" id="lenghtPassword" name="lenghtPassword" placeholder="inserisci la lunghezza della password">
-                        </div>
-                        <div class="d-flex justify-content-center p-2">
-                            <button class="btn btn-primary">Invia</button>
-                        </div>
-                    </form>
-                </div>
+            <div class="text-white text-center mt-5 pt-5">
+                <span>Password Generata:</span>
+                <?php
+                echo randomPassword($lenghtPassword);
+                ?>
             </div>
+            </form>
         </div>
     </main>
 </body>
